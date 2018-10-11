@@ -48,7 +48,7 @@ public class FillDatabaseWithRandomTask {
 
         recipe.setTitle("La choucroute aux champignons " + count++);
         recipe.setDate(new Date());
-        recipe.setIntro("De la choucroute, des champignons et un peu d'espiéglerie");
+        recipe.setIntro("De la choucroute, des champignons et beaucoup d'espiéglerie");
         recipe.setText("du texte\ndu texte\ndu texte\net encore du texte.");
         recipe.setImageId(randomImage());
         recipe.setTags(randomTags());

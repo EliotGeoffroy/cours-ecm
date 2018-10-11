@@ -10,3 +10,5 @@ docs/build/
 project/build/
 
 mongodb-data
+
+project/out/

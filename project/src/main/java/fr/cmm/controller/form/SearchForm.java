@@ -19,6 +19,9 @@ public class SearchForm {
     }
 
     public void setPageIndex(int pageIndex) {
-        this.pageIndex = pageIndex;
+        if (pageIndex <= 0)
+            this.pageIndex = 1;
+        else
+            this.pageIndex = pageIndex;
     }
 }

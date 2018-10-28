@@ -17,6 +17,9 @@
                 <li><a href="/recettes">Toutes les recettes</a></li>
                 <li><a href="/recette-du-moment">Recette du moment</a></li>
             </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/admin/recettes">Admin</a></li>
+            </ul>
         </div>
     </div>
 </nav>

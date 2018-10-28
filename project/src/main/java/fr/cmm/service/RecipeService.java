@@ -7,6 +7,7 @@ import java.util.PriorityQueue;
 import javax.inject.Inject;
 
 import org.bson.types.ObjectId;
+import org.hibernate.validator.constraints.Length;
 import org.jongo.MongoCollection;
 import org.jongo.MongoCursor;
 import org.springframework.stereotype.Service;
@@ -44,7 +45,10 @@ public class RecipeService {
     }
 
     public Recipe findById(String id) {
-        return recipeCollection.findOne(new ObjectId(id)).as(Recipe.class);
+        if (id.length() == 24)
+            return recipeCollection.findOne(new ObjectId(id)).as(Recipe.class);
+        else
+            return null;
     }
 
     public void save(Recipe recipe) {

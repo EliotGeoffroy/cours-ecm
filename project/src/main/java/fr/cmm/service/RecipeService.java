@@ -4,6 +4,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.PriorityQueue;
 
+import java.util.*;
+
 import javax.inject.Inject;
 
 import org.bson.types.ObjectId;
@@ -37,7 +39,13 @@ public class RecipeService {
     }
 
     public long countByQuery(PageQuery query) {
-        return recipeCollection.count();
+        String mongoQuery = "{}";
+        String[] params = {};
+        if (query.getTag() != null && !"".equals(query.getTag())) {
+            mongoQuery = "{tags: #}";
+            params = new String[] {query.getTag()};
+        }
+        return recipeCollection.count(mongoQuery, (Object[]) params);
     }
 
     public Iterator<Recipe> findRandom(int count) {

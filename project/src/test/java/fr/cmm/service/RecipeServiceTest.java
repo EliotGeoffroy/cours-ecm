@@ -109,4 +109,16 @@ public class RecipeServiceTest {
         String id = "92999403003IJDJO0";
         Assert.assertEquals(null, recipeService.findById(id));
     }
+
+    @Test
+    public void countByQuery() {
+        recipeService.save(new Recipe().withTags("tag1"));
+        recipeService.save(new Recipe().withTags("tag1"));
+        recipeService.save(new Recipe().withTags("tag2"));
+        recipeService.save(new Recipe().withTags("tag2"));
+        recipeService.save(new Recipe().withTags("tag3"));
+        PageQuery query = new PageQuery();
+        query.setTag("tag3");
+        Assert.assertEquals(1,recipeService.countByQuery(query));
+    }
 }

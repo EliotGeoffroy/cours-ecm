@@ -35,6 +35,9 @@
             <ul class="nav navbar-nav">
                 <li><a href="/admin/recettes">Recettes</a></li>
             </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/logout">Deconnexion</a></li>
+            </ul>
         </div>
     </div>
 </nav>

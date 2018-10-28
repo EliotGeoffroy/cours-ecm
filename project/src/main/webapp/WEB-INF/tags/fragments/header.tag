@@ -1,4 +1,4 @@
-<%@ tag body-content="empty" pageEncoding="UTF-8" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">

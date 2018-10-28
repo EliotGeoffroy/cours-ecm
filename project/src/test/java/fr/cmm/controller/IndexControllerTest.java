@@ -63,7 +63,7 @@ public class IndexControllerTest {
 
         Mockito.when(recipeService.findById(id)).thenReturn(new Recipe());
 
-        mockMvc.perform(get("/recette/" + id))
+        mockMvc.perform(get("/recette/" + null))
                 .andExpect(status().is(404));
     }
 
